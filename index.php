@@ -41,6 +41,3 @@ foreach($products as $product) {
 <? include "footer.php";
 ?>
 </html>
-
-
-vhgvhg
