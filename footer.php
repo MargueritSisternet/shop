@@ -12,7 +12,7 @@
             width="40"
             height="40"
           />
-          <p>TIKI'S<br />45 rue de l'épice<br />45236 Bourg-la-Reine</p>
+          <p>FOOTER - TIKI'S<br />45 rue de l'épice<br />45236 Bourg-la-Reine</p>
         </div>
         <div class="phone_number">
           <img

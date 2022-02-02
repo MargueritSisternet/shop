@@ -25,3 +25,6 @@ formatPrice(priceExcludingVAT($products["iphone"]["price"]));
 
 formatPrice($products["ipad"]["price"]);
 formatPrice(priceExcludingVAT($products["ipad"]["price"]));
+
+include 'footer.php'
+?>

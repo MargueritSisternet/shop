@@ -27,6 +27,7 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img
+          
             id="logo-header"
             src="./src/src_footer_header/wlogo.svg"
             alt=""
@@ -89,6 +90,9 @@
             <li class="nav-item">
               <a class="nav-link" href="./catalogue.html">Catalogue</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./catalogue.html">Header</a>
+            </li>
             <li class="icons_header">
               <a href="./login.html">
                 <img
@@ -119,6 +123,7 @@
               </a>
             </li>
           </ul>
+          <header>HEADER</header>
         </div>
       </div>
     </nav>
