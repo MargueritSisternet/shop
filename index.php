@@ -10,23 +10,26 @@
 </head>
 <body>
 <? include "header.php";
+include "my_functions.php";
+include "tableau_multidimensionnel.php";
 ?>
 
 <div class="box_bandeau_1">
      <h1>PRODUCTS</h1>   
     </div>
 
-<? include "tableau_multidimensionnel.php";
-?>
-
 <?php
 foreach($products as $product) {
     
     ?>
     <div class="box_bandeau_1">
-    <H4><strong><?=$product["name"]?></strong></H4>
-    <H4><?="Price : " . $product["price"]. " cents"?></H4>
+    <H3><strong><?=$product["name"]?></strong></H3>
+    <H4>Price : <?= formatPrice($product["price"]);?></H4>
+    <H4> Price Excluding VAT : <?= formatPrice(priceExcludingVAT($product["price"]));?> </h4>
+    <br>
     <h4><?="Discount : " . $product["discount"]. "%"?></h4>
+    <H4><strong>Discounted Price : <?= formatPrice(discountedPrice($product["price"],$product["discount"]));?></strong></H4>
+    <br>
     <h4><?="Weight : " . $product["weight"]. " g"?></h4>
     </div>
     <div class="box_bandeau_1">

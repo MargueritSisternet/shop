@@ -17,14 +17,19 @@
 ];*/
 
 
-function formatPrice($value) {
-    $value = $value/100 . " euros";
-    echo $value . "<br>";
+function formatPrice($price) {
+    $price_euros = $price/100 . " euros";
+    echo $price_euros . "<br>";
     }
     
-    function priceExcludingVAT($value) {
-    $value = ($value - ($value*20)/100);
-    return $value;
+    function priceExcludingVAT($price) {
+    $price_HT = ($price - ($price*20)/100);
+    return $price_HT;
+    }
+
+    function discountedPrice($price, $discount) {
+        $discounted_price = ($price - ($price*($discount))/100);
+        return $discounted_price;
     }
     ?>
 
