@@ -19,7 +19,7 @@
        
 
     <?php
-        $iphone = [
+        /*$iphone = [
         "name" => "iPhone",
         "price" => 45000,
         "weight" => 200,
@@ -39,15 +39,28 @@
         "weight" => 800,
         "discount" => 10,
         "picture\_url" => "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/imac-og-202008?wid=600&hei=315&fmt=jpeg&qlt=95&.v=1594849639000",
-        ];
+        ];*/
+
+        include 'database.php';
     ?>
-    <div class="onverra" style="display: inline">
-     <h1>PRODUCTS</h1>   
-    <img src="ipad.jpg" height="40%" width="40%">
-    </div> 
+
+
     
-     <?php   
-        echo "<H1>\"${ipad["name"]}\"</H1>";
+    <?php
+    
+    $livre = affichageBd($mybdd);
+    
+    foreach ($livre as $item){
+    // echo "<pre>";
+    // var_dump($item);
+    // echo "</pre>";
+    echo $item["name"]. "<br>";
+
+    }
+
+    
+    
+        /*echo "<H1>\"${ipad["name"]}\"</H1>";
         echo "<br>";
         echo 'Price :'. $ipad["price"];
         echo "<br>";
@@ -73,7 +86,7 @@
         echo 'weight :'. $imac["weight"];
         echo 'discount :'. $imac["discount"];
         echo "<img src=\"${imac["picture\_url"]}\" alt=\"imac\">";
-
+*/
     ?>
 </body>
    </html>

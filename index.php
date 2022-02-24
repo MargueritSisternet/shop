@@ -14,7 +14,8 @@
 <body>
 <? include "header.php";
 include "my_functions.php";
-include "tableau_multidimensionnel.php";
+include "multidimensional-catalog.php";
+require "database.php"
 ?>
 
 <div class="box_bandeau_1">
@@ -26,9 +27,9 @@ foreach($products as $product) {
     
     ?>
     <div class="box_bandeau_1">
-    <H3><strong><?=$product["name"]?></strong></H3>
-    <H4>Price : <?= formatPrice($product["price"]);?></H4>
-    <H4> Price Excluding VAT : <?= formatPrice(priceExcludingVAT($product["price"]));?> </h4>
+    <h3><strong><?=$product["name"]?></strong></h3>
+    <h4>Price : <?= formatPrice($product["price"]);?></h4>
+    <h4> Price Excluding VAT : <?= formatPrice(priceExcludingVAT($product["price"]));?> </h4>
     <br>
     <h4><?="Discount : " . $product["discount"]. "%"?></h4>
     <H4><strong>Discounted Price : <?= formatPrice(discountedPrice($product["price"],$product["discount"]));?></strong></H4>
